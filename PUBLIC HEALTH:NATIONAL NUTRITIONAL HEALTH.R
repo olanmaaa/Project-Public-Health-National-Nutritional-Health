@@ -64,7 +64,9 @@ range(cleaned_nhanes$BPDia)
 
 #determining the variance and standard deviation of income across all participants 
 income_variance <- var(cleaned_nhanes$Income)
+print (income_variance)
 income_sd <- sd(cleaned_nhanes$Income)
+print (income_sd)
 
 #visualizing the relationship between weight and height using scatterplot
 #color the points according to:gender,diabetes & smoking status
@@ -108,7 +110,7 @@ sum(nhanes.data$RelationshipStatus == '0')
 cleaned_nhanes$RelationshipStatus <- factor(ifelse(cleaned_nhanes$RelationshipStatus %in% c('0','Single'), 'Single', 'Committed'))
 t.test (AlcoholYear ~ RelationshipStatus, data= cleaned_nhanes)
 
-
+#final discussion of the results will be captured in the report within the repository
 
 
 
